@@ -18,9 +18,24 @@ namespace Healenium.Selenium.Tests
         [Obsolete]
         public static void SetUp()
         {
-            var optionsChrome = new ChromeOptions();
-            optionsChrome.AddArguments("--no-sandbox");
-            _driver = new RemoteWebDriver(new Uri("http://54.158.45.5:4444"), optionsChrome);
+            var browserOptions = new ChromeOptions();
+            browserOptions.PlatformName = "Windows 10";
+            browserOptions.BrowserVersion = "latest"
+            var sauceOptions = new Dictionary<string, object>();
+            sauceOptions.Add("username", "oauth-manisharajamani97-3541d");
+            sauceOptions.Add("accessKey", "e4fb9dca-9c93-4566-80ea-c254d12614e9");
+            sauceOptions.Add("build", "<your build id>");
+            sauceOptions.Add("name", "<your test name>");
+            browserOptions.AddAdditonalOption("sauce:options", sauceOptions);
+
+ 
+
+            //var uri = new Uri("https://ondemand.eu-central-1.saucelabs.com:443/wd/hub");
+            //var driver = new RemoteWebDriver(uri, browserOptions);
+            
+            //var optionsChrome = new ChromeOptions();
+            //optionsChrome.AddArguments("--no-sandbox");
+            _driver = new RemoteWebDriver(new Uri("https://ondemand.eu-central-1.saucelabs.com:443/wd/hub"), browserOptions);
 
             //var options = new FirefoxOptions();
             //_driver = new RemoteWebDriver(new Uri("http://localhost:8085"), options);
