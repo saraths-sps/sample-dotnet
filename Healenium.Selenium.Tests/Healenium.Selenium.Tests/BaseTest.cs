@@ -30,12 +30,12 @@ namespace Healenium.Selenium.Tests
 
  
 
-            //var uri = new Uri("https://ondemand.eu-central-1.saucelabs.com:443/wd/hub");
-            //var driver = new RemoteWebDriver(uri, browserOptions);
+            var uri = new Uri("https://ondemand.eu-central-1.saucelabs.com:443/wd/hub");
+            var driver = new RemoteWebDriver(uri, browserOptions);
             
             //var optionsChrome = new ChromeOptions();
             //optionsChrome.AddArguments("--no-sandbox");
-            _driver = new RemoteWebDriver(new Uri("https://ondemand.eu-central-1.saucelabs.com:443/wd/hub"), browserOptions);
+            //_driver = new RemoteWebDriver(new Uri("http://localhost:4444/wd/hub"), optionsChrome);
 
             //var options = new FirefoxOptions();
             //_driver = new RemoteWebDriver(new Uri("http://localhost:8085"), options);
