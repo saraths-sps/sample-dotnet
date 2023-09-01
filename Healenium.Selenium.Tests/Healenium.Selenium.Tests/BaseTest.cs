@@ -35,7 +35,7 @@ namespace Healenium.Selenium.Tests
             
             var optionsChrome = new ChromeOptions();
             optionsChrome.AddArguments("--no-sandbox");
-            _driver = new RemoteWebDriver(new Uri("http://3.80.249.158:4444/wd/hub"), optionsChrome);
+            _driver = new RemoteWebDriver(new Uri("http://54.80.188.40:4444/wd/hub"), optionsChrome);
 
             //var options = new FirefoxOptions();
             //_driver = new RemoteWebDriver(new Uri("http://localhost:8085"), options);
