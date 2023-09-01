@@ -8,34 +8,34 @@ namespace Healenium.Selenium.Tests
 
         [Test]
         [Description("Update locator for element with css attribute")]
-       // public void TestCssAttribute()
-      //  {
-        //    bool result = _callbackPage
-         //           .OpenPage()
-         //           .ClickAddSquareButton()
-          //          .VerifySquareElement();
-           // Assert.IsTrue(result, "Element with css enabled");
+        public void TestCssAttribute()
+        {
+            bool result = _callbackPage
+                    .OpenPage()
+                    .ClickAddSquareButton()
+                    .VerifySquareElement();
+            Assert.IsTrue(result, "Element with css enabled");
 
-           // for (int i = 0; i <= 2; i++)
-           // {
-            //    result = _callbackPage
-                 //       .ClickUpdateSquareButton()
-               //         .VerifySquareElement(); //should be healed
-              //  Assert.IsTrue(result, "Element with css was healed");
-          //  }
-       // }
+            for (int i = 0; i <= 2; i++)
+            {
+                result = _callbackPage
+                        .ClickUpdateSquareButton()
+                        .VerifySquareElement(); //should be healed
+                Assert.IsTrue(result, "Element with css was healed");
+            }
+        }
 
-      //  [Test]
-     //   [Description("Update locator for element with css id")]
-     //   public void TestCssId()
-     //   {
-     //       _testEnvPage.OpenPage()
-        //             .FindTestElement(LocatorType.Css, "#change_id")
-               //      .ClickSubmitButton()
-              //       .FindTestElement(LocatorType.Css, "#change_id");
-      //  }
+        [Test]
+        [Description("Update locator for element with css id")]
+        public void TestCssId()
+        {
+            _testEnvPage.OpenPage()
+                     .FindTestElement(LocatorType.Css, "#change_id")
+                     .ClickSubmitButton()
+                     .FindTestElement(LocatorType.Css, "#change_id");
+        }
 
-       /* [Test]
+        [Test]
         [Description("Update locator for element with css id with special character")]
         public void TestCssIdSpecialCharacter()
         {
@@ -84,7 +84,7 @@ namespace Healenium.Selenium.Tests
                     .ClickSubmitButton()
                     .FindTestElement(LocatorType.Css, "input:checked");
         }
-*/
+
         [Test]
         [Description("Update locator for element with css Hover")]
         public void TestCssHover()
@@ -92,7 +92,7 @@ namespace Healenium.Selenium.Tests
 
         }
 
-      /*  [Test]
+        [Test]
         [Description("Update locator for element with Css ClassName")]
         public void TestCssClassName()
         {
@@ -100,7 +100,7 @@ namespace Healenium.Selenium.Tests
                     .FindTestElement(LocatorType.Css, ".test_class")
                     .ClickSubmitButton()
                     .FindTestElement(LocatorType.Css, ".test_class");
-        }*/
+        }
     }
 }
 
